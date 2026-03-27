@@ -1064,6 +1064,7 @@ rule-providers:
       format: mrs,
     }
 rules:
+  - DOMAIN-KEYWORD,96518,DIRECT
   - DOMAIN-KEYWORD,cloudfront,DIRECT
   - DOMAIN-KEYWORD,Hyhbh,DIRECT
   - RULE-SET,category-ads-all,🛑 广告拦截
