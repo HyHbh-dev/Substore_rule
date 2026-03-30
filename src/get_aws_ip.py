@@ -1,5 +1,4 @@
 # 从aws官网获取ip_ranges.json文件
-# 使用异步请求且必须获取到，否则panic
 # 这个文件是从aws获取ip并筛选ipv4
 import asyncio
 import json
@@ -8,16 +7,7 @@ import aiohttp
 from loguru import logger
 from pydantic import BaseModel
 
-AWS_BASE_URL = "https://ip-ranges.amazonaws.com/ip-ranges.json"
-REGIONS = {
-    "ap-east-1",
-    "ap-east-2",
-    "ap-northeast-1",
-    "ap-northeast-2",
-    "ap-northeast-3",
-    "us-west-1",
-    "us-west-2",
-}
+from src.constants import AWS_BASE_URL, REGIONS
 
 
 class IpRangeInfo4(BaseModel):
