@@ -1,6 +1,10 @@
-from get_aws_ip import get_aws_ip_ranges
+from loguru import logger
 
-import asyncio
+from get_aws_ip import get_data
+
+logger.add("file_{time}.log", rotation="500 MB")
+
 
 if __name__ == "__main__":
-    ip_ranges = asyncio.run(get_aws_ip_ranges())
+    logger.info("启动")
+    get_data()
