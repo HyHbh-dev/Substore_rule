@@ -1,0 +1,31 @@
+{
+  "best_ip": {
+    "cidr": "16.12.80.0/24",
+    "best_latency_ms": 107.01,
+    "ip": "16.12.80.1",
+    "host": "images-assets.nasa.gov",
+    "latency_ms": 317.92,
+    "speed_mbps": 0.31,
+    "success": true
+  },
+  "ranges": [
+    {
+      "cidr": "16.12.80.0/24",
+      "best_latency_ms": 107.01,
+      "ip": "16.12.80.1",
+      "host": "images-assets.nasa.gov",
+      "latency_ms": 317.92,
+      "speed_mbps": 0.31,
+      "success": true
+    },
+    {
+      "cidr": "3.2.75.0/24",
+      "best_latency_ms": 92.82,
+      "ip": "3.2.75.1",
+      "host": "images-assets.nasa.gov",
+      "latency_ms": 305.31,
+      "speed_mbps": 0.0,
+      "success": true
+    }
+  ]
+}

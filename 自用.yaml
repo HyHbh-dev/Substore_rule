@@ -150,10 +150,10 @@ geox-url:
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
-    proxies: ["⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 德国, 美国, 土耳其]
+    proxies: ["⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国, 土耳其]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: [香港, 台湾, 德国, 美国, 土耳其]
+    proxies: [香港, 台湾, 美国, 土耳其]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
@@ -170,7 +170,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -184,7 +183,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -198,7 +196,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -212,7 +209,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -226,7 +222,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -240,7 +235,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -254,7 +248,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -268,7 +261,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -282,7 +274,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -296,7 +287,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -310,7 +300,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -324,7 +313,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -338,7 +326,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -352,7 +339,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -366,7 +352,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -380,7 +365,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -394,7 +378,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -408,7 +391,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -422,7 +404,6 @@ proxy-groups:
         "⚡ 自动选择",
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -436,7 +417,6 @@ proxy-groups:
         "⚡ 自动选择",
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -450,7 +430,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]
@@ -464,7 +443,6 @@ proxy-groups:
         REJECT,
         香港,
         台湾,
-        德国,
         美国,
         土耳其,
       ]

@@ -11,3 +11,5 @@ REGIONS = {
     "us-west-1",
     "us-west-2",
 }
+
+DOWNLOAD_URL = "https://images-assets.nasa.gov/image/PIA08653/PIA08653\~thumb.jpg"

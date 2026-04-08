@@ -1,5 +1,6 @@
 # 从aws官网获取ip_ranges.json文件
 # 这个文件是从aws获取ip并筛选ipv4
+# 并筛选出亚太和美西地区IP地址
 import asyncio
 import json
 
