@@ -21,8 +21,6 @@ dns:
     geoip: true
     ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
 
-proxies:
-
 
 proxy-groups:
   - name: "🚀 节点选择"
