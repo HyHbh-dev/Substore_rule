@@ -21,7 +21,6 @@ dns:
     geoip: true
     ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
 
-
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
@@ -51,14 +50,56 @@ proxy-groups:
 
 rule-providers:
   # 仅保留核心分类，极大减少资源占用
-  ads: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs", path: ./ruleset/ads.mrs, interval: 86400, format: mrs}
-  ai: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs", path: ./ruleset/ai.mrs, interval: 86400, format: mrs}
-  cn: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs", path: ./ruleset/cn.mrs, interval: 86400, format: mrs}
-  proxy: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs", path: ./ruleset/proxy.mrs, interval: 86400, format: mrs}
-  cn-ip: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs", path: ./ruleset/cn-ip.mrs, interval: 86400, format: mrs}
+  ads:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs",
+      path: ./ruleset/ads.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  ai:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs",
+      path: ./ruleset/ai.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  cn:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs",
+      path: ./ruleset/cn.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  proxy:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs",
+      path: ./ruleset/proxy.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  cn-ip:
+    {
+      type: http,
+      behavior: ipcidr,
+      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs",
+      path: ./ruleset/cn-ip.mrs,
+      interval: 86400,
+      format: mrs,
+    }
 
 rules:
   - DOMAIN-KEYWORD,96518,DIRECT
+  - DOMAIN-KEYWORD,cloudfront,DIRECT
+  - DOMAIN-KEYWORD,Hyhbh,DIRECT
   - RULE-SET,ads,🛑 广告拦截
   - RULE-SET,ai,🤖 AI 服务
   - RULE-SET,cn,🔒 国内服务
