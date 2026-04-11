@@ -1,13 +1,10 @@
-# 基础配置：优化移动端连接与省电
 mixed-port: 7897
-allow-lan: false
+allow-lan: false # 手机端建议关闭 LAN 共享以省电
 mode: rule
 log-level: info
 unified-delay: true
 tcp-concurrent: true
-find-process-mode: strict
 
-# DNS 配置：兼顾响应速度与解析准确性
 dns:
   enable: true
   listen: "127.0.0.1:5335"
@@ -24,27 +21,23 @@ dns:
     geoip: true
     ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
 
-# ---------------------------------------------------
-# 节点信息：在此处粘贴你的代理节点
-proxies: 
-  # - {name: "示例节点", type: ss, server: ..., ...}
+proxies:
 
-# ---------------------------------------------------
 
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾] # 此处填入上面定义的节点名
+    proxies: ["⚡ 自动选择", "DIRECT", 香港, 德国, 美国, 土耳其, 台湾]
 
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: [香港, 美国, 土耳其, 台湾] # 此处填入需要参与测速的节点
+    proxies: [香港, 德国, 美国, 土耳其, 台湾]
     url: "http://www.gstatic.com/generate_204"
     interval: 300
 
   - name: "🤖 AI 服务"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾]
+    proxies: ["🚀 节点选择", 美国, 台湾, 香港] # AI通常禁大陆/特定区
 
   - name: "🛑 广告拦截"
     type: select
@@ -56,53 +49,22 @@ proxy-groups:
 
   - name: "🐟 漏网之鱼"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾]
+    proxies: ["🚀 节点选择", DIRECT]
 
-# 规则集定义：通过 MRS 二进制格式大幅提升手机端加载速度
 rule-providers:
-  ads: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
-    path: ./ruleset/ads.mrs
-    interval: 86400
-    format: mrs
-  ai: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs"
-    path: ./ruleset/ai.mrs
-    interval: 86400
-    format: mrs
-  cn_site: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs"
-    path: ./ruleset/cn_site.mrs
-    interval: 86400
-    format: mrs
-  proxy_site: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
-    path: ./ruleset/proxy_site.mrs
-    interval: 86400
-    format: mrs
-  cn_ip: 
-    type: http
-    behavior: ipcidr
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
-    path: ./ruleset/cn_ip.mrs
-    interval: 86400
-    format: mrs
+  # 仅保留核心分类，极大减少资源占用
+  ads: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs", path: ./ruleset/ads.mrs, interval: 86400, format: mrs}
+  ai: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs", path: ./ruleset/ai.mrs, interval: 86400, format: mrs}
+  cn: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs", path: ./ruleset/cn.mrs, interval: 86400, format: mrs}
+  proxy: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs", path: ./ruleset/proxy.mrs, interval: 86400, format: mrs}
+  cn-ip: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs", path: ./ruleset/cn-ip.mrs, interval: 86400, format: mrs}
 
-# 规则逻辑：从上到下匹配，匹配即停止
 rules:
   - DOMAIN-KEYWORD,96518,DIRECT
   - RULE-SET,ads,🛑 广告拦截
   - RULE-SET,ai,🤖 AI 服务
-  - RULE-SET,cn_site,🔒 国内服务
-  - RULE-SET,proxy_site,🚀 节点选择
-  - RULE-SET,cn_ip,🔒 国内服务,no-resolve
+  - RULE-SET,cn,🔒 国内服务
+  - RULE-SET,proxy,🚀 节点选择
+  - RULE-SET,cn-ip,🔒 国内服务,no-resolve
   - GEOIP,lan,DIRECT
   - MATCH,🐟 漏网之鱼
