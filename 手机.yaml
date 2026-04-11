@@ -34,17 +34,17 @@ proxies:
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
-    proxies: ["⚡ 自动选择", "DIRECT", "香港节点", "美国节点"] # 此处填入上面定义的节点名
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾] # 此处填入上面定义的节点名
 
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: ["香港节点", "美国节点"] # 此处填入需要参与测速的节点
+    proxies: [香港, 美国, 土耳其, 台湾] # 此处填入需要参与测速的节点
     url: "http://www.gstatic.com/generate_204"
     interval: 300
 
   - name: "🤖 AI 服务"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾]
 
   - name: "🛑 广告拦截"
     type: select
@@ -56,7 +56,7 @@ proxy-groups:
 
   - name: "🐟 漏网之鱼"
     type: select
-    proxies: ["🚀 节点选择", DIRECT]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 美国, 土耳其, 台湾]
 
 # 规则集定义：通过 MRS 二进制格式大幅提升手机端加载速度
 rule-providers:
