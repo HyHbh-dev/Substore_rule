@@ -48,6 +48,18 @@ proxy-groups:
     type: select
     proxies: ["⚡ 自动选择", "DIRECT", 香港, 美国, 土耳其, 台湾]
 
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies: ["🚀 节点选择", 美国, 台湾, 香港]
+
+  - name: "🔍 谷歌服务"
+    type: select
+    proxies: ["🚀 节点选择", 美国, 台湾, 香港]
+
+  - name: "🍏 苹果服务"
+    type: select
+    proxies: ["🚀 节点选择", 美国, 台湾, 香港]
+
   - name: "🛑 广告拦截"
     type: select
     proxies: [REJECT, DIRECT]
