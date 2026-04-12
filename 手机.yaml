@@ -1,5 +1,5 @@
 mixed-port: 7897
-allow-lan: false # 手机端建议关闭 LAN 共享以省电
+allow-lan: false
 mode: rule
 log-level: info
 unified-delay: true
@@ -34,17 +34,17 @@ proxy-groups:
 
   - name: "🤖 AI 服务"
     type: select
-    proxies: ["🚀 节点选择", 美国, 台湾, 香港] # AI通常禁大陆/特定区
+    proxies: ["🚀 节点选择", 美国, 台湾, 香港]
 
-  - name: "微软"
+  - name: "🔍 谷歌服务"
     type: select
     proxies: ["🚀 节点选择", 美国, 台湾, 香港]
 
-  - name: "google"
+  - name: "Ⓜ️ 微软服务"
     type: select
     proxies: ["🚀 节点选择", 美国, 台湾, 香港]
 
-  - name: "apple"
+  - name: "🍏 苹果服务"
     type: select
     proxies: ["🚀 节点选择", 美国, 台湾, 香港]
 
@@ -61,120 +61,35 @@ proxy-groups:
     proxies: ["🚀 节点选择", DIRECT]
 
 rule-providers:
-  # 仅保留核心分类，极大减少资源占用
-  ads:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs",
-      path: ./ruleset/ads.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  ai:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs",
-      path: ./ruleset/ai.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  cn:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs",
-      path: ./ruleset/cn.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  proxy:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs",
-      path: ./ruleset/proxy.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  cn-ip:
-    {
-      type: http,
-      behavior: ipcidr,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs",
-      path: ./ruleset/cn-ip.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  google:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs",
-      path: ./ruleset/google.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-    google-ip:
-    {
-      type: http,
-      behavior: ipcidr,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs",
-      path: ./ruleset/google-ip.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  microsoft:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs",
-      path: ./ruleset/microsoft.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  onedrive:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/onedrive.mrs",
-      path: ./ruleset/onedrive.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  apple:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs",
-      path: ./ruleset/apple.mrs,
-      interval: 86400,
-      format: mrs,
-    }
-  icloud:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/icloud.mrs",
-      path: ./ruleset/icloud.mrs,
-      interval: 86400,
-      format: mrs,
-    }
+  ads: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs", path: ./ruleset/ads.mrs, interval: 86400, format: mrs}
+  ai: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.mrs", path: ./ruleset/ai.mrs, interval: 86400, format: mrs}
+  cn: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs", path: ./ruleset/cn.mrs, interval: 86400, format: mrs}
+  proxy: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs", path: ./ruleset/proxy.mrs, interval: 86400, format: mrs}
+  cn-ip: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs", path: ./ruleset/cn-ip.mrs, interval: 86400, format: mrs}
+  google: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs", path: ./ruleset/google.mrs, interval: 86400, format: mrs}
+  google-ip: {type: http, behavior: ipcidr, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs", path: ./ruleset/google-ip.mrs, interval: 86400, format: mrs}
+  microsoft: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs", path: ./ruleset/microsoft.mrs, interval: 86400, format: mrs}
+  onedrive: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/onedrive.mrs", path: ./ruleset/onedrive.mrs, interval: 86400, format: mrs}
+  apple: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs", path: ./ruleset/apple.mrs, interval: 86400, format: mrs}
+  icloud: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/icloud.mrs", path: ./ruleset/icloud.mrs, interval: 86400, format: mrs}
 
 rules:
-  - DOMAIN-KEYWORD,google,🤖 AI 服务
+  # 优先放广告拦截
+  - RULE-SET,ads,🛑 广告拦截
+  # 自定义直连
   - DOMAIN-KEYWORD,96518,DIRECT
   - DOMAIN-KEYWORD,cloudfront,DIRECT
   - DOMAIN-KEYWORD,Hyhbh,DIRECT
+  # AI 服务（放在 Google 之前，防止 Gemini 被误判为普通 Google 搜索）
+  - RULE-SET,ai,🤖 AI 服务
+  # 细分服务
   - RULE-SET,apple,🍏 苹果服务
   - RULE-SET,icloud,🍏 苹果服务
   - RULE-SET,microsoft,Ⓜ️ 微软服务
   - RULE-SET,onedrive,Ⓜ️ 微软服务
   - RULE-SET,google,🔍 谷歌服务
   - RULE-SET,google-ip,🔍 谷歌服务,no-resolve
-  - RULE-SET,ads,🛑 广告拦截
-  - RULE-SET,ai,🤖 AI 服务
+  # 兜底规则
   - RULE-SET,cn,🔒 国内服务
   - RULE-SET,proxy,🚀 节点选择
   - RULE-SET,cn-ip,🔒 国内服务,no-resolve
