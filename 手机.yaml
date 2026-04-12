@@ -97,6 +97,7 @@ rule-providers:
     }
 
 rules:
+  - DOMAIN-KEYWORD,google,🤖 AI 服务
   - DOMAIN-KEYWORD,96518,DIRECT
   - DOMAIN-KEYWORD,cloudfront,DIRECT
   - DOMAIN-KEYWORD,Hyhbh,DIRECT
