@@ -5,6 +5,7 @@ log-level: info
 unified-delay: true
 tcp-concurrent: true
 find-process-mode: strict
+
 dns:
   enable: true
   listen: "127.0.0.1:5335"
@@ -128,9 +129,11 @@ dns:
       "*.*.xboxlive.com",
       speedtest.cros.wr.pvp.net,
     ]
+
 profile:
   store-selected: true
   store-fake-ip: false
+
 sniffer:
   enable: true
   parse-pure-ip: true
@@ -138,6 +141,7 @@ sniffer:
     HTTP: { ports: [80, 8080-8880], override-destination: true }
     QUIC: { ports: [443, 8443] }
     TLS: { ports: [443, 8443] }
+
 geodata-mode: true
 geo-auto-update: true
 geodata-loader: standard
@@ -147,13 +151,15 @@ geox-url:
   geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
   mmdb: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
   asn: https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb
+
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
-    proxies: ["⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      ["⚡ 自动选择", DIRECT, REJECT, 台湾, "台湾 vless", "美国 vless", 美国]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: [台湾, 美国]
+    proxies: [台湾, "台湾 vless", "美国 vless", 美国]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
@@ -162,71 +168,396 @@ proxy-groups:
     proxies: [REJECT, DIRECT, "🚀 节点选择"]
   - name: "🤖 AI 服务"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "✨ Gemini"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "📹 油管视频"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🔍 谷
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "Ⓜ️ 微
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🔍 谷歌服务"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "🍏 苹果服务"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "📲 电报消息"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "🐦 推特/X"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "📘 Meta 系"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "🎙️ Discord"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "💬 其他社交"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🎬 奈飞"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🏰 迪士尼+"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
   - name: "📺 欧美流媒体"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🎌 亚洲
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🎮 St
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🖥️ PC
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🐱 代
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "☁️ 
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🛠️ 开
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "💾 网
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🏠 私
-    type: se
-    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 台湾, 美国]
-  - name: "🔒 国
-    type: se
-    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 台湾, 美国]
-  - name: "🌍 
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-  - name: "🐟 漏
-    type: se
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
-rule-provid
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🎌 亚洲流媒体"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🎮 Steam"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🖥️ PC 游戏"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🎯 主机游戏"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🐱 代码托管"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "☁️ 云服务"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🛠️ 开发工具"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "💾 网盘存储"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "💳 支付平台"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "₿ 加密货币"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "📚 教育学术"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "📰 新闻资讯"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🛒 海淘购物"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🏠 私有网络"
+    type: select
+    proxies:
+      [
+        DIRECT,
+        REJECT,
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🔒 国内服务"
+    type: select
+    proxies:
+      [
+        DIRECT,
+        REJECT,
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🌍 非中国"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+      [
+        "🚀 节点选择",
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+      ]
+
+rule-providers:
   category-ads-all:
     {
       type: http,
@@ -281,15 +612,6 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
-  category-ai-chat-!cn:
-    {
-      type: http,
-      behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-chat-!cn.mrs",
-      path: "./ruleset/category-ai-chat-!cn.mrs",
-      interval: 86400,
-      format: mrs,
-    }
   openai:
     {
       type: http,
@@ -308,12 +630,12 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
-  google-gemini:
+  category-ai-chat-!cn:
     {
       type: http,
       behavior: domain,
-      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs",
-      path: ./ruleset/google-gemini.mrs,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-chat-!cn.mrs",
+      path: "./ruleset/category-ai-chat-!cn.mrs",
       interval: 86400,
       format: mrs,
     }
@@ -416,6 +738,42 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
+  facebook:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs",
+      path: ./ruleset/facebook.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  instagram:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/instagram.mrs",
+      path: ./ruleset/instagram.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  whatsapp:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/whatsapp.mrs",
+      path: ./ruleset/whatsapp.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  facebook-ip:
+    {
+      type: http,
+      behavior: ipcidr,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/facebook.mrs",
+      path: ./ruleset/facebook-ip.mrs,
+      interval: 86400,
+      format: mrs,
+    }
   discord:
     {
       type: http,
@@ -485,6 +843,33 @@ rule-provid
       behavior: domain,
       url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tumblr.mrs",
       path: ./ruleset/tumblr.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  netflix:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs",
+      path: ./ruleset/netflix.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  netflix-ip:
+    {
+      type: http,
+      behavior: ipcidr,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs",
+      path: ./ruleset/netflix-ip.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  disney:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs",
+      path: ./ruleset/disney.mrs,
       interval: 86400,
       format: mrs,
     }
@@ -668,6 +1053,33 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
+  playstation:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/playstation.mrs",
+      path: ./ruleset/playstation.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  xbox:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox.mrs",
+      path: ./ruleset/xbox.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  nintendo:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/nintendo.mrs",
+      path: ./ruleset/nintendo.mrs,
+      interval: 86400,
+      format: mrs,
+    }
   github:
     {
       type: http,
@@ -812,6 +1224,159 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
+  paypal:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/paypal.mrs",
+      path: ./ruleset/paypal.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  stripe:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/stripe.mrs",
+      path: ./ruleset/stripe.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  wise:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/wise.mrs",
+      path: ./ruleset/wise.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  binance:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs",
+      path: ./ruleset/binance.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  category-scholar-!cn:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-scholar-!cn.mrs",
+      path: "./ruleset/category-scholar-!cn.mrs",
+      interval: 86400,
+      format: mrs,
+    }
+  coursera:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/coursera.mrs",
+      path: ./ruleset/coursera.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  udemy:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/udemy.mrs",
+      path: ./ruleset/udemy.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  edx:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/edx.mrs",
+      path: ./ruleset/edx.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  khanacademy:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/khanacademy.mrs",
+      path: ./ruleset/khanacademy.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  wikimedia:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/wikimedia.mrs",
+      path: ./ruleset/wikimedia.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  bbc:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bbc.mrs",
+      path: ./ruleset/bbc.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  cnn:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cnn.mrs",
+      path: ./ruleset/cnn.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  nytimes:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/nytimes.mrs",
+      path: ./ruleset/nytimes.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  wsj:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/wsj.mrs",
+      path: ./ruleset/wsj.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  bloomberg:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bloomberg.mrs",
+      path: ./ruleset/bloomberg.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  amazon:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs",
+      path: ./ruleset/amazon.mrs,
+      interval: 86400,
+      format: mrs,
+    }
+  ebay:
+    {
+      type: http,
+      behavior: domain,
+      url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/ebay.mrs",
+      path: ./ruleset/ebay.mrs,
+      interval: 86400,
+      format: mrs,
+    }
   cn:
     {
       type: http,
@@ -821,16 +1386,26 @@ rule-provid
       interval: 86400,
       format: mrs,
     }
+
 rules:
   - DOMAIN-KEYWORD,96518,DIRECT
   - DOMAIN-KEYWORD,cloudfront,DIRECT
   - DOMAIN-KEYWORD,Hyhbh,DIRECT
   - RULE-SET,category-ads-all,🛑 广告拦截
-  - RULE-SET,google-gemini,✨ Gemini
-  - RULE-SET,category-ai-chat-!cn,🤖 AI 服务
+  - RULE-SET,private,🏠 私有网络
+  - RULE-SET,private-ip,🏠 私有网络,no-resolve
   - RULE-SET,openai,🤖 AI 服务
   - RULE-SET,anthropic,🤖 AI 服务
+  - RULE-SET,category-ai-chat-!cn,🤖 AI 服务
+  - RULE-SET,geolocation-cn,🔒 国内服务
+  - RULE-SET,cn-ip,🔒 国内服务,no-resolve
   - RULE-SET,youtube,📹 油管视频
+  - RULE-SET,category-scholar-!cn,📚 教育学术
+  - RULE-SET,coursera,📚 教育学术
+  - RULE-SET,udemy,📚 教育学术
+  - RULE-SET,edx,📚 教育学术
+  - RULE-SET,khanacademy,📚 教育学术
+  - RULE-SET,wikimedia,📚 教育学术
   - RULE-SET,aws,☁️ 云服务
   - RULE-SET,azure,☁️ 云服务
   - RULE-SET,cloudflare,☁️ 云服务
@@ -840,10 +1415,6 @@ rules:
   - RULE-SET,cloudflare-ip,☁️ 云服务,no-resolve
   - RULE-SET,google,🔍 谷歌服务
   - RULE-SET,google-ip,🔍 谷歌服务,no-resolve
-  - RULE-SET,private,🏠 私有网络
-  - RULE-SET,private-ip,🏠 私有网络,no-resolve
-  - RULE-SET,geolocation-cn,🔒 国内服务
-  - RULE-SET,cn-ip,🔒 国内服务,no-resolve
   - RULE-SET,telegram,📲 电报消息
   - RULE-SET,telegram-ip,📲 电报消息,no-resolve
   - RULE-SET,github,🐱 代码托管
@@ -856,6 +1427,10 @@ rules:
   - RULE-SET,icloud,🍏 苹果服务
   - RULE-SET,twitter,🐦 推特/X
   - RULE-SET,twitter-ip,🐦 推特/X,no-resolve
+  - RULE-SET,facebook,📘 Meta 系
+  - RULE-SET,instagram,📘 Meta 系
+  - RULE-SET,whatsapp,📘 Meta 系
+  - RULE-SET,facebook-ip,📘 Meta 系,no-resolve
   - RULE-SET,discord,🎙️ Discord
   - RULE-SET,tiktok,💬 其他社交
   - RULE-SET,line,💬 其他社交
@@ -864,6 +1439,9 @@ rules:
   - RULE-SET,snap,💬 其他社交
   - RULE-SET,pinterest,💬 其他社交
   - RULE-SET,tumblr,💬 其他社交
+  - RULE-SET,netflix,🎬 奈飞
+  - RULE-SET,netflix-ip,🎬 奈飞,no-resolve
+  - RULE-SET,disney,🏰 迪士尼+
   - RULE-SET,hbo,📺 欧美流媒体
   - RULE-SET,hulu,📺 欧美流媒体
   - RULE-SET,primevideo,📺 欧美流媒体
@@ -883,12 +1461,26 @@ rules:
   - RULE-SET,blizzard,🖥️ PC 游戏
   - RULE-SET,gog,🖥️ PC 游戏
   - RULE-SET,riot,🖥️ PC 游戏
+  - RULE-SET,playstation,🎯 主机游戏
+  - RULE-SET,xbox,🎯 主机游戏
+  - RULE-SET,nintendo,🎯 主机游戏
   - RULE-SET,docker,🛠️ 开发工具
   - RULE-SET,npmjs,🛠️ 开发工具
   - RULE-SET,jetbrains,🛠️ 开发工具
   - RULE-SET,stackexchange,🛠️ 开发工具
   - RULE-SET,dropbox,💾 网盘存储
   - RULE-SET,notion,💾 网盘存储
+  - RULE-SET,paypal,💳 支付平台
+  - RULE-SET,stripe,💳 支付平台
+  - RULE-SET,wise,💳 支付平台
+  - RULE-SET,binance,₿ 加密货币
+  - RULE-SET,bbc,📰 新闻资讯
+  - RULE-SET,cnn,📰 新闻资讯
+  - RULE-SET,nytimes,📰 新闻资讯
+  - RULE-SET,wsj,📰 新闻资讯
+  - RULE-SET,bloomberg,📰 新闻资讯
+  - RULE-SET,amazon,🛒 海淘购物
+  - RULE-SET,ebay,🛒 海淘购物
   - RULE-SET,geolocation-!cn,🌍 非中国
   - RULE-SET,cn,🔒 国内服务
   - MATCH,🐟 漏网之鱼
