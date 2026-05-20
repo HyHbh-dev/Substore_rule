@@ -150,10 +150,10 @@ geox-url:
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
-    proxies: ["⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: [香港, 台湾, 美国]
+    proxies: [台湾, 美国]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
@@ -162,71 +162,71 @@ proxy-groups:
     proxies: [REJECT, DIRECT, "🚀 节点选择"]
   - name: "🤖 AI 服务"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "✨ Gemini"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "📹 油管视频"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🔍 谷歌服务"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "Ⓜ️ 微软服务"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🔍 谷
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "Ⓜ️ 微
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "🍏 苹果服务"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "📲 电报消息"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "🐦 推特/X"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "🎙️ Discord"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "💬 其他社交"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
   - name: "📺 欧美流媒体"
     type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🎌 亚洲流媒体"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🎮 Steam"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🖥️ PC 游戏"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🐱 代码托管"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "☁️ 云服务"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🛠️ 开发工具"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "💾 网盘存储"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🏠 私有网络"
-    type: select
-    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 香港, 台湾, 美国]
-  - name: "🔒 国内服务"
-    type: select
-    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 香港, 台湾, 美国]
-  - name: "🌍 非中国"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-  - name: "🐟 漏网之鱼"
-    type: select
-    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 香港, 台湾, 美国]
-rule-providers:
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🎌 亚洲
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🎮 St
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🖥️ PC
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🐱 代
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "☁️ 
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🛠️ 开
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "💾 网
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🏠 私
+    type: se
+    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 台湾, 美国]
+  - name: "🔒 国
+    type: se
+    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择", 台湾, 美国]
+  - name: "🌍 
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+  - name: "🐟 漏
+    type: se
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT, 台湾, 美国]
+rule-provid
   category-ads-all:
     {
       type: http,
