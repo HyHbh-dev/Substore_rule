@@ -1388,6 +1388,7 @@ rule-providers:
     }
 
 rules:
+  - DOMAIN-KEYWORD,immersivetranslate,DIRECT
   - DOMAIN-KEYWORD,96518,DIRECT
   - DOMAIN-KEYWORD,cloudfront,DIRECT
   - DOMAIN-KEYWORD,Hyhbh,DIRECT
