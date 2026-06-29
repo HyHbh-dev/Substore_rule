@@ -156,10 +156,20 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      ["⚡ 自动选择", DIRECT, REJECT, 台湾, "台湾 vless", "美国 vless", 美国]
+      [
+        "⚡ 自动选择",
+        DIRECT,
+        REJECT,
+        台湾,
+        "台湾 vless",
+        "美国 vless",
+        美国,
+        德国,
+        "德国 vless",
+      ]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: [台湾, "台湾 vless", "美国 vless", 美国]
+    proxies: [台湾, "台湾 vless", "美国 vless", 美国, 德国, "德国 vless"]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
