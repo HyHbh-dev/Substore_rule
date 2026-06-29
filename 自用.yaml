@@ -178,6 +178,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📹 油管视频"
     type: select
@@ -191,6 +193,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🔍 谷歌服务"
     type: select
@@ -204,6 +208,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "Ⓜ️ 微软服务"
     type: select
@@ -217,6 +223,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🍏 苹果服务"
     type: select
@@ -230,6 +238,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📲 电报消息"
     type: select
@@ -243,6 +253,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🐦 推特/X"
     type: select
@@ -256,6 +268,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📘 Meta 系"
     type: select
@@ -269,6 +283,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🎙️ Discord"
     type: select
@@ -282,6 +298,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "💬 其他社交"
     type: select
@@ -295,6 +313,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🎬 奈飞"
     type: select
@@ -308,6 +328,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🏰 迪士尼+"
     type: select
@@ -321,6 +343,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📺 欧美流媒体"
     type: select
@@ -334,6 +358,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🎌 亚洲流媒体"
     type: select
@@ -347,6 +373,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🎮 Steam"
     type: select
@@ -360,6 +388,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🖥️ PC 游戏"
     type: select
@@ -373,6 +403,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🎯 主机游戏"
     type: select
@@ -386,6 +418,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🐱 代码托管"
     type: select
@@ -399,6 +433,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "☁️ 云服务"
     type: select
@@ -412,6 +448,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🛠️ 开发工具"
     type: select
@@ -425,6 +463,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "💾 网盘存储"
     type: select
@@ -438,6 +478,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "💳 支付平台"
     type: select
@@ -451,6 +493,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "₿ 加密货币"
     type: select
@@ -464,6 +508,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📚 教育学术"
     type: select
@@ -477,6 +523,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "📰 新闻资讯"
     type: select
@@ -490,6 +538,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🛒 海淘购物"
     type: select
@@ -503,6 +553,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🏠 私有网络"
     type: select
@@ -516,6 +568,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🔒 国内服务"
     type: select
@@ -529,6 +583,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🌍 非中国"
     type: select
@@ -542,6 +598,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
   - name: "🐟 漏网之鱼"
     type: select
@@ -555,6 +613,8 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
+        德国,
+        "德国 vless",
       ]
 
 rule-providers:
