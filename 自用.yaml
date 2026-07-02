@@ -164,24 +164,14 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
   - name: "⚡ 自动选择"
     type: url-test
     proxies:
-      [
-        台湾,
-        "台湾 vless",
-        "美国 vless",
-        美国,
-        德国,
-        "德国 vless",
-        日本,
-        "日本 vless",
-      ]
+      [台湾, "台湾 vless", "美国 vless", 美国, "德国 vmess", 日本, "日本 vless"]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
@@ -200,8 +190,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -217,8 +206,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -234,8 +222,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -251,8 +238,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -268,8 +254,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -285,8 +270,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -302,8 +286,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -319,8 +302,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -336,8 +318,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -353,8 +334,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -370,8 +350,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -387,8 +366,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -404,8 +382,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -421,8 +398,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -438,8 +414,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -455,8 +430,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -472,8 +446,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -489,8 +462,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -506,8 +478,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -523,8 +494,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -540,8 +510,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -557,8 +526,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -574,8 +542,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -591,8 +558,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -608,8 +574,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -625,8 +590,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -642,8 +606,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -659,8 +622,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -676,8 +638,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
@@ -693,8 +654,7 @@ proxy-groups:
         "台湾 vless",
         "美国 vless",
         美国,
-        德国,
-        "德国 vless",
+        "德国 vmess",
         日本,
         "日本 vless",
       ]
