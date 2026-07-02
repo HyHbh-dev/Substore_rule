@@ -169,8 +169,7 @@ proxy-groups:
       ]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies:
-      [台湾, "台湾 vless", "美国 vless", 美国, "德国 vmess", 日本, "日本 vless"]
+    proxies: [台湾, "台湾 vless", 美国, "德国 vmess", 日本, "日本 vless"]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
